@@ -1,0 +1,16 @@
+android_app {
+    name: "SysApp",
+    srcs: ["app/src/main/java/**/*.java"],
+    resource_dirs: ["app/src/main/res"],
+    manifest: "app/src/main/AndroidManifest.xml",
+
+    static_libs: [
+        "androidx.appcompat_appcompat",
+        "androidx.core_core",
+        "com.google.android.material_material",
+    ],
+
+    sdk_version: "current",
+    privileged: true,
+    platform_apis: true,
+}
