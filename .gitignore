@@ -1,0 +1,11 @@
+# Created by Gemini
+
+# Android Studio
+.gradle
+.idea
+local.properties
+build/
+app/build/
+
+# Other
+*.iml
