@@ -14,9 +14,17 @@ SysApp is an Android application designed for developers, ROM customizers, and p
 
 This application requests several powerful permissions to perform its functions. These permissions are intended for testing and diagnostic purposes only.
 
-- `android.permission.WRITE_SECURE_SETTINGS`: Allows the app to read and write to the system's secure settings.
+- `android.permission.WRITE_SECURE_SETTINGS`: Allows the app to read and write to the system's secure settings. This is a privileged permission and must be granted in the system's configuration.
 - `android.permission.READ_LOGS`: Allows the app to read the system's log files.
 - `android.permission.ACCESS_SUPERUSER`: Allows the app to request root access.
+
+To grant the `WRITE_SECURE_SETTINGS` permission, add the following to the `frameworks/base/data/etc/privapp-permissions-platform.xml` file:
+
+```xml
+<privapp-permissions package="com.example.sysapp">
+    <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+</privapp-permissions>
+```
 
 ## Disclaimer
 
